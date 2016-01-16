@@ -1,0 +1,15 @@
+#!/bin/bash
+
+config='
+set terminal dumb
+set datafile separator ","
+set border 3
+set tics nomirror
+plot "-" using 1:2 with boxes
+'
+
+stdin="$(cat)"
+
+echo "$stdin" | cut -d , -f 2 | hist -x <(echo "$stdin" | cut -d , -f 1)
+
+# cat <(echo "$config") - | gnuplot
