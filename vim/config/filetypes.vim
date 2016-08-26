@@ -15,6 +15,9 @@ autocmd BufRead,BufNewFile *.json set filetype=javascript
 autocmd BufRead,BufNewFile *.prawn set filetype=ruby
 autocmd BufRead,BufNewFile *.txt set filetype=text
 
+autocmd BufRead,BufNewFile *.overrides,*.variables set filetype=less
+autocmd BufRead,BufNewFile *.ejs set filetype=html
+
 autocmd FileType clojure set iskeyword-=.
 
 autocmd FileType mail set textwidth=0

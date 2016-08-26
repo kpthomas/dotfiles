@@ -5,7 +5,7 @@ set guioptions-=T  " No toolbar
 set guicursor+=a:blinkon0
 
 if(has("macunix"))
-  set guifont=Menlo:h14,Monaco:h14
+  set guifont=Inconsolata-dz:h18,Menlo:h14
 elseif(has("unix"))
   set guifont=Deja\ Vu\ Sans\ 14
 elseif(has("win32"))

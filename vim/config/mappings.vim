@@ -13,6 +13,7 @@ cabbrev Q q
 cabbrev Qa qa
 cabbrev Tabe tabe
 cabbrev Tabn tabn
+cabbrev Tabo tabo
 cabbrev W w
 cabbrev Wa wa
 cabbrev Wq wq
@@ -24,3 +25,30 @@ map Y y$
 " Indent/unindent visual mode selection with tab/shift+tab
 vmap <tab> >gv
 vmap <s-tab> <gv
+
+" kpthomas
+imap jj <Esc>:w<CR>
+
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+
+nnoremap <space> za
+
+nnoremap <C-H> <C-W>h
+nnoremap <D-[> <C-W>h
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
+nnoremap <D-]> <C-W>l
+
+nnoremap <CR> :noh<CR><CR>
+nnoremap <F3> :noh<CR>
+
+nnoremap <F5> :CommandTFlush<CR>
+map <leader>f :CommandTFlush<CR>:CommandT<CR>
+map <leader>gt :CommandTFlush<CR>:CommandT %%<CR>
+map <space>pf :CommandTFlush<CR>:CommandT<CR>
+
+" regreplop
+" nmap <C-B> <Plug>ReplaceMotion
+" nmap <C-B> <Plug>ReplaceLine
+" vmap <C-B> <Plug>ReplaceVisual

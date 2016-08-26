@@ -1,35 +1,46 @@
 [user]
-	name = Andrew Marshall
-	email = andrew@johnandrewmarshall.com
+  name = Kevin Pefianco Thomas
+  email = kthomas@stride.nyc
 [advice]
-	commitBeforeMerge = false
-	detachedHead = false
-	pushNonFastForward = false
-	resolveConflict = false
-	statusHints = false
+  commitBeforeMerge = false
+  detachedHead = false
+  pushNonFastForward = false
+  resolveConflict = false
+  statusHints = false
 [alias]
-	amend = commit --amend -C HEAD
-	co = checkout
-	dc = diff --cached
-	pop = reset --soft head~1
-	reword = commit --only --amend
-	root = rev-parse --show-toplevel
-	st = status
-	unpulled = !"git fetch && git log HEAD..@{u}"
-	unpushed = log @{u}..HEAD
+  amend = commit --amend -C HEAD
+  co = checkout
+  dc = diff --cached
+  pop = reset --soft head~1
+  reword = commit --only --amend
+  root = rev-parse --show-toplevel
+  st = status
+  pushf = push --force-with-lease
+  unpulled = !"git fetch && git log HEAD..@{u}"
+  unpushed = log @{u}..HEAD
+  cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
 [color]
-	ui = auto
+  ui = auto
 [core]
-	autocrlf = input
-	excludesfile = ~/.gitignore
+  autocrlf = input
+  excludesfile = ~/.gitignore
 [fetch]
-	prune = true
+  prune = true
 [log]
-	decorate = true
+  decorate = true
 [pager]
-	unpulled = false
-	unpushed = false
-[pull]
-	ff = only
+  unpulled = false
+  unpushed = false
 [push]
-	default = simple
+  default = current
+[credential]
+  helper = osxkeychain
+[format]
+  pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
+[merge]
+  tool = p4mergetool
+[mergetool "p4mergetool"]
+  cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $PWD/$BASE $PWD/$REMOTE $PWD/$LOCAL $PWD/$MERGED
+  trustExitCode = false
+[mergetool]
+  keepBackup = false

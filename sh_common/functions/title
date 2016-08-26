@@ -1,0 +1,6 @@
+title () {
+  if [ "$1" ]; then
+    unset PROMPT_COMMAND
+    echo -ne "\033]0;${*}\007"
+  fi
+}

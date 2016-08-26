@@ -1,0 +1,10 @@
+gitvim () {
+  files=$(git diff --name-only HEAD)
+  files+=" $(git ls-files --others --exclude-standard)"
+
+  if [ -n "$files" ]; then
+    mvim -p $files
+  else
+    mvim .
+  fi
+}

@@ -46,3 +46,14 @@ if [ -x /usr/bin/dircolors ]; then
   alias dir='dir --color=auto'
   alias vdir='vdir --color=auto'
 fi
+
+# Custom Aliases
+
+alias vim="mvim -v"
+alias ctags="`brew --prefix`/bin/ctags"
+alias reload="source ~/.bashrc_local"
+alias fcm="cd ~/workspace/forecast_manager"
+alias shutupvim="rm ~/.vim/tmp/*.swp"
+alias cd..="cd .."
+alias ..="cd .."
+alias mkdir="mkdir -pv"
